@@ -1,5 +1,6 @@
 const express = require('express');
 const inquirer = require('inquirer');
+const cTable = require('console.table');
 const app = express()
 
 app.get('/', function(req, res) {
@@ -7,6 +8,16 @@ app.get('/', function(req, res) {
 })
 
 app.listen(3000);
+
+console.table([
+    {
+        name: 'foo',
+        age: 10
+    }, {
+        name: 'bar',
+        age: 20
+    }
+]);
 
 const questions = [
     {
@@ -26,63 +37,54 @@ const questions = [
 ]
 
 
-
-
 function init() {
     inquirer.prompt(questions)
     .then((response) => {
         switch (response.start) {
             case 'view departments':
-                viewdepartment();
+                viewDepartment();
                 break;
             case 'view roles':
-                viewroles();
+                viewRoles();
                 break;
             case 'view employees':
-                viewemployees();
+                viewEmployees();
                 break;
             case 'add department':
-                adddepartment();
+                addDepartment();
                 break;
             case 'add role':
-                addrole();
+                addRole();
                 break;
             case 'add employee':
-                addemployee();
+                addEmployee();
                 break;
             default:
-                updateemployee();
+                updateEmployee();
         }
     })
 
-    function viewdepartment() {
+    function viewDepartment() {
         console.log("YOU ARE VIEWING THE DEPARMENT.");
     }
-
-    function viewroles() {
+    function viewRoles() {
         console.log("YOU ARE VIEWING ROLES");
     }
-
-    function viewemployees() {
+    function viewEmployees() {
         console.log("YOU ARE VIEWING EMPLOYEES");
     }
-
-    function adddepartment() {
+    function addDepartment() {
         console.log("YOU ARE ADDING A DEPARTMENT");
     }
-
-    function addrole() {
+    function addRole() {
         console.log("YOU ARE ADDING A ROLE");
     }
-
-    function addemployee() {
+    function addEmployee() {
         console.log("YOU ARE ADDING AN EMPLOYEE");
     }
-
-    function updateemployee() {
+    function updateEmployee() {
         console.log("YOU ARE UPDATING AN EMPLOYEE");
     }
-
 }
 
 init();
