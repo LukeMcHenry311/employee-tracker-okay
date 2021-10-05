@@ -31,30 +31,58 @@ const questions = [
 function init() {
     inquirer.prompt(questions)
     .then((response) => {
-        console.log("SHIPPING EVERYTHING TO CHINA");
         switch (response.start) {
             case 'view departments':
-                console.log("view department");
+                viewdepartment();
                 break;
             case 'view roles':
-                console.log("view roles");
+                viewroles();
                 break;
             case 'view employees':
-                console.log("view employees");
+                viewemployees();
                 break;
             case 'add department':
-                console.log("add department");
+                adddepartment();
                 break;
             case 'add role':
-                console.log("add role");
+                addrole();
                 break;
             case 'add employee':
-                console.log("add employee");
+                addemployee();
                 break;
             default:
-                console.log('update employee');
+                updateemployee();
         }
     })
+
+    function viewdepartment() {
+        console.log("YOU ARE VIEWING THE DEPARMENT.");
+    }
+
+    function viewroles() {
+        console.log("YOU ARE VIEWING ROLES");
+    }
+
+    function viewemployees() {
+        console.log("YOU ARE VIEWING EMPLOYEES");
+    }
+
+    function adddepartment() {
+        console.log("YOU ARE ADDING A DEPARTMENT");
+    }
+
+    function addrole() {
+        console.log("YOU ARE ADDING A ROLE");
+    }
+
+    function addemployee() {
+        console.log("YOU ARE ADDING AN EMPLOYEE");
+    }
+
+    function updateemployee() {
+        console.log("YOU ARE UPDATING AN EMPLOYEE");
+    }
+
 }
 
 init();
