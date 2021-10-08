@@ -18,7 +18,7 @@ Javascript, mySQL, Inquirer, Ctable
 ## Github-Link
 https://github.com/LukeMcHenry311/employee-tracker-okay
 ## Video
-(fill in later)
+https://watch.screencastify.com/v/aAGIpM5BD7ZCLyBJiGXJ
 ## Collaborations
 StackOverflow, Youtube, Classmates, Relatives (my dad is a programmer and my brother is an accountant but knows mySQL somewhat).
 ## Struggles
